@@ -71,51 +71,58 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container header-container">
-      <div class="logo">
-        <img src="images/logo.jpg" alt="HeshSoftware Logo" />
-        <h1>HESH Softwares</h1>
-      </div>
-      <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="careers.html">Careers</a>
-        <a href="contact.html" class="active">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h2>Let's Work Together</h2>
-    <p>Got an idea or need a solution? We’d love to hear from you.</p>
-  </section>
-
-  <section class="services">
-    <h2>Contact Form</h2>
-    <div class="card">
-      <form action="#" method="POST">
+  <section class="form-section">
+    <h2>Contact Us</h2>
+    <p>Have a project or idea in mind? Let's talk!</p>
+    <div class="form-container">
+      <form id="contactForm">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn-primary">Send Message</button>
+        <input type="text" name="phone" placeholder="Phone Number (optional)" />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
       </form>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 HeshSoftware. All rights reserved.</p>
-      <p>Email: <a href="mailto:contact@heshsoftware.com">contact@heshsoftware.com</a> | Phone: +1-800-123-4567</p>
-      <div class="social-icons">
-        <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
-        <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn" /></a>
-        <a href="#"><img src="./images/twitter.svg" alt="Twitter" /></a>
-      </div>
-    </div>
-  </footer>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Stop form from submitting normally
+
+      const form = e.target;
+
+      const formData = new FormData(form);
+
+      fetch("https://formsubmit.co/ajax/rathorelokesh1002@gmail.com", {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          Swal.fire({
+            title: "Message Sent!",
+            text: "We’ll get back to you shortly.",
+            icon: "success",
+            confirmButtonColor: "#5B86E5"
+          });
+          form.reset();
+        } else {
+          throw new Error("Submission failed.");
+        }
+      })
+      .catch(error => {
+        Swal.fire({
+          title: "Oops!",
+          text: "Something went wrong. Please try again.",
+          icon: "error",
+          confirmButtonColor: "#d33"
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
