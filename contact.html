@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Contact Us | HeshSoftware</title>
-  <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
+    /* Form Section Styling */
     .form-section {
       background: linear-gradient(to right, #5B86E5, #36D1DC);
       padding: 60px 20px;
@@ -67,10 +67,98 @@
     button:hover {
       background: #4a72c1;
     }
+
+    /* Header + Footer (reuse) */
+    .site-header {
+      background: #fff;
+      padding: 15px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      color: #5B86E5;
+    }
+
+    .navbar a {
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .navbar a.active,
+    .navbar a:hover {
+      color: #5B86E5;
+    }
+
+    .site-footer {
+      background: #2c3e50;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .site-footer a {
+      color: #90CAF9;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons {
+      margin-top: 12px;
+    }
+
+    .social-icons img {
+      height: 24px;
+      margin: 0 8px;
+      filter: brightness(0) invert(1);
+    }
   </style>
 </head>
 <body>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="HeshSoftware Logo" />
+        <h1>HESH Softwares</h1>
+      </div>
+      <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTACT FORM -->
   <section class="form-section">
     <h2>Contact Us</h2>
     <p>Have a project or idea in mind? Let's talk!</p>
@@ -85,12 +173,25 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 HeshSoftware. All rights reserved.</p>
+      <p>Email: <a href="mailto:contact@heshsoftware.com">contact@heshsoftware.com</a> | Phone: +1-800-123-4567</p>
+      <div class="social-icons">
+        <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
+        <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn" /></a>
+        <a href="#"><img src="./images/twitter.svg" alt="Twitter" /></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS for SweetAlert2 submission -->
   <script>
     document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // Stop form from submitting normally
+      e.preventDefault();
 
       const form = e.target;
-
       const formData = new FormData(form);
 
       fetch("https://formsubmit.co/ajax/rathorelokesh1002@gmail.com", {
@@ -104,19 +205,19 @@
         if (response.ok) {
           Swal.fire({
             title: "Message Sent!",
-            text: "We’ll get back to you shortly.",
+            text: "We'll get back to you soon.",
             icon: "success",
             confirmButtonColor: "#5B86E5"
           });
           form.reset();
         } else {
-          throw new Error("Submission failed.");
+          throw new Error("Form submission failed");
         }
       })
       .catch(error => {
         Swal.fire({
           title: "Oops!",
-          text: "Something went wrong. Please try again.",
+          text: "Something went wrong. Please try again later.",
           icon: "error",
           confirmButtonColor: "#d33"
         });
