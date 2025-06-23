@@ -3,17 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <title>Portfolio | HeshSoftware</title>
-  <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+  <!-- HEADER -->
+  <header class="header">
     <div class="logo">
       <img src="./images/logo.jpg" alt="HeshSoftware Logo" />
       <h1>HeshSoftware</h1>
     </div>
-    <nav>
-      <a href="index.html">Home</a> 
+    <nav class="navbar">
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="portfolio.html" class="active">Portfolio</a>
@@ -22,67 +24,89 @@
     </nav>
   </header>
 
-  <section class="hero portfolio-hero">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero-content">
-      <h2>Hamare Portfolio</h2>
-      <p>Explore our recent projects and success stories. We deliver excellence across industries and technologies.</p>
+      <h2>Our Portfolio</h2>
+      <p>Explore the digital solutions we’ve crafted with passion and precision for clients worldwide.</p>
     </div>
   </section>
 
-  <section class="portfolio-gallery">
+  <!-- PROJECTS -->
+  <section class="portfolio-section">
     <h2>Featured Projects</h2>
     <div class="portfolio-grid">
+      <!-- Project Cards -->
       <div class="portfolio-item">
         <img src="./images/portfolio1.jpg" alt="E-Commerce Platform" />
-        <div class="portfolio-info">
+        <div class="info">
           <h3>E-Commerce Platform</h3>
-          <p>Custom-built scalable e-commerce solution with real-time analytics and seamless payment integration.</p>
-          <span class="portfolio-tags">React • Node.js • AWS</span>
+          <p>Scalable solution with real-time analytics and payment integration.</p>
+          <span>React • Node.js • AWS</span>
         </div>
       </div>
       <div class="portfolio-item">
-        <img src="./images/portfolio2.jpeg" alt="Healthcare Mobile App" />
-        <div class="portfolio-info">
+        <img src="./images/portfolio2.jpeg" alt="Healthcare App" />
+        <div class="info">
           <h3>Healthcare Mobile App</h3>
-          <p>HIPAA-compliant mobile app for appointment booking, telemedicine, and patient management.</p>
-          <span class="portfolio-tags">Flutter • Firebase • Android/iOS</span>
+          <p>Telemedicine, appointment booking & patient management.</p>
+          <span>Flutter • Firebase</span>
         </div>
       </div>
       <div class="portfolio-item">
         <img src="./images/portfolio3.jpeg" alt="AI Chatbot" />
-        <div class="portfolio-info">
+        <div class="info">
           <h3>AI Chatbot</h3>
-          <p>Conversational AI chatbot for customer support, integrated with CRM and knowledge base.</p>
-          <span class="portfolio-tags">Python • NLP • Azure</span>
+          <p>Conversational support bot connected to CRM.</p>
+          <span>Python • NLP • Azure</span>
         </div>
       </div>
       <div class="portfolio-item">
         <img src="./images/portfolio4.jpeg" alt="FinTech Dashboard" />
-        <div class="portfolio-info">
+        <div class="info">
           <h3>FinTech Dashboard</h3>
-          <p>Real-time financial dashboard for investment tracking and portfolio management.</p>
-          <span class="portfolio-tags">Angular • D3.js • Google Cloud</span>
+          <p>Track investments & portfolios in real-time.</p>
+          <span>Angular • D3.js • GCP</span>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="./images/portfolio5.jpeg" alt="Education LMS" />
+        <div class="info">
+          <h3>Education LMS</h3>
+          <p>Interactive learning platform with analytics and exams.</p>
+          <span>PHP • MySQL • Bootstrap</span>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <img src="./images/portfolio6.jpeg" alt="Logistics Tracker" />
+        <div class="info">
+          <h3>Logistics Tracker</h3>
+          <p>Real-time shipment & delivery management solution.</p>
+          <span>Java • Spring • MongoDB</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="portfolio-cta">
-    <h2>Ready to Build Something Amazing?</h2>
-    <p>Contact us to discuss your project or request a demo of our work.</p>
-    <a href="contact.html" class="cta-btn">Let's Talk</a>
+  <!-- INDUSTRIES -->
+  <section class="industries">
+    <h2>Industries We Serve</h2>
+    <div class="industry-list">
+      <span>Healthcare</span>
+      <span>Retail</span>
+      <span>FinTech</span>
+      <span>Education</span>
+      <span>Hospitality</span>
+      <span>Real Estate</span>
+    </div>
   </section>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 HeshSoftware. All rights reserved.</p>
-      <p>Email: <a href="mailto:contact@heshsoftware.com">contact@heshsoftware.com</a> | Phone: +1-800-123-4567</p>
-      <div class="social-links">
-        <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
-        <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn" /></a>
-        <a href="#"><img src="./images/twitter.svg" alt="Twitter" /></a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Ready to Build Something Amazing?</h2>
+    <p>Let’s collaborate to turn your vision into a digital reality.</p>
+    <a href="contact.html" class="cta-btn">Get in Touch</a>
+  </section>
+
+  <!-- FOOTER -->
+  <foot

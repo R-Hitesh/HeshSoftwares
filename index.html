@@ -2,78 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>HeshSoftware - Future-Ready IT Solutions</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Hero Text Animation */
-    .hero h2 {
-      color: #fff;
-      animation: fadeInUp 1.2s ease-out;
-    }
-    .hero p {
-      animation: fadeInUp 1.8s ease-out;
-    }
-    .btn-primary {
-      animation: fadeInUp 2.4s ease-out;
-    }
-    @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Updated Footer Design */
-    .site-footer {
-      background: linear-gradient(to right, #1c1e26, #2f3542);
-      color: var(--white);
-      padding: 40px 0 20px;
-      text-align: center;
-    }
-    .footer-content {
-      max-width: 1000px;
-      margin: auto;
-    }
-    .footer-content p {
-      margin: 8px 0;
-      font-size: 15px;
-      color: #ccc;
-    }
-    .footer-links {
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .footer-links a {
-      color: #90CAF9;
-      font-weight: 500;
-      transition: 0.3s;
-    }
-    .footer-links a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-    .social-icons img {
-      margin-top: 14px;
-      filter: brightness(0) invert(1);
-      transition: transform 0.3s ease;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
-    }
-  </style>
 </head>
 <body>
+
   <!-- HEADER -->
   <header class="site-header">
-    <div class="container header-container">
+    <div class="header-container">
       <div class="logo">
         <img src="./images/logo.jpg" alt="HeshSoftware Logo" />
         <h1>HESH Softwares</h1>
@@ -82,8 +19,7 @@
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
-        <a href="solutions.html">Solutions</a>
-        <a href="ai.html">AI & ML</a>
+        <a href="portfolio.html">Portfolio</a>
         <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -92,31 +28,55 @@
 
   <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-content">
-      <h2>Transforming Ideas into Intelligent Software Solutions</h2>
-      <p>AI-powered platforms, cloud-native apps, DevOps automation, and more — designed for scale, security, and performance.</p>
-      <a href="contact.html" class="btn-primary">Start Your Project</a>
+    <h2>Transforming Ideas into Intelligent Software Solutions</h2>
+    <p>AI-powered platforms, cloud-native apps, DevOps automation, and more — designed for scale, security, and performance.</p>
+    <a href="contact.html" class="btn-primary">Start Your Project</a>
+  </section>
+
+  <!-- SERVICES / CARDS SECTION -->
+  <section class="cards-section">
+    <h3>What We Offer</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Custom Software</h4>
+        <p>Tailored systems to match your business growth and workflows.</p>
+      </div>
+      <div class="card">
+        <h4>Cloud Services</h4>
+        <p>Expert deployment across AWS, Azure, and Google Cloud platforms.</p>
+      </div>
+      <div class="card">
+        <h4>AI Integration</h4>
+        <p>Boost intelligence in your product with NLP, ML, and Chatbots.</p>
+      </div>
+      <div class="card">
+        <h4>DevOps Automation</h4>
+        <p>CI/CD pipelines, zero-downtime releases, and modern toolchains.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Rest of content remains unchanged -->
+  <!-- WHY US SECTION -->
+  <section class="why-us">
+    <h3>Why Choose HeshSoftware?</h3>
+    <p>We combine innovation and engineering excellence to build future-ready applications, ensuring performance, security, and scalability for every client.</p>
+  </section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <p>&copy; 2025 HeshSoftware. Built for the future.</p>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Use</a>
-        <a href="sitemap.html">Sitemap</a>
-      </div>
-      <p>Email: <a href="mailto:hello@heshsoftware.com">hello@heshsoftware.com</a> | Phone: +91-98765-43210</p>
-      <div class="social-icons">
-        <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
-        <a href="#"><img src="./images/x.svg" alt="X (Twitter)"></a>
-      </div>
+    <p>&copy; 2025 HeshSoftware. Future-Driven Tech Company.</p>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="sitemap.html">Sitemap</a>
+    </div>
+    <p>Email: <a href="mailto:hello@heshsoftware.com">hello@heshsoftware.com</a> | Phone: +91-98765-43210</p>
+    <div class="social-icons">
+      <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="#"><img src="./images/x.svg" alt="Twitter"></a>
     </div>
   </footer>
+
 </body>
 </html>
