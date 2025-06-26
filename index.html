@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -25,6 +25,35 @@
       </nav>
     </div>
   </header>
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="features">
+  <h2 class="section-title">Our Core Services</h2>
+  <div id="featureList" class="features-container"></div>
+  <button id="loadFeaturesBtn" class="btn-load">Explore Features</button>
+</section>
+
+
+
+
+
+
+
+
+
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -53,6 +82,15 @@
         <h4>DevOps Automation</h4>
         <p>CI/CD pipelines, zero-downtime releases, and modern toolchains.</p>
       </div>
+      <div class="card">
+        <h4>UI/UX Design</h4>
+        <p>Modern user interfaces with an intuitive experience design process.</p>
+      </div>
+      
+      <div class="card">
+        <h4>Mobile App Development</h4>
+        <p>Cross-platform apps for Android & iOS with performance focus.</p>
+      </div>
     </div>
   </section>
 
@@ -62,21 +100,135 @@
     <p>We combine innovation and engineering excellence to build future-ready web applications, ensuring performance, security, and scalability for every client.</p>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Mobile Menu -->
+<button id="menuToggle">☰</button>
+<nav id="navMenu" class="mobile-nav">...</nav>
+
+<!-- Features Section -->
+<button id="loadFeaturesBtn">Load Features</button>
+<div id="featureList" class="feature-container"></div>
+
+<!-- Scroll to Top -->
+<button id="scrollTopBtn" style="display:none;">↑ Top</button>
+
+<!-- Script -->
+<script type="module" src="js/app.js"></script>
+<script src="features.js"></script>
+<script src="utils.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- TECHNOLOGIES SECTION -->
+  <section class="tech-stack">
+    <h3>Technologies We Use</h3>
+    <div class="tech-logos">
+      <img src="./images/react.jpg" alt="React">
+      <img src="./images/images.png" alt="Node.js">
+      <img src="./images/aws.png" alt="AWS">
+      <img src="./images/python.png" alt="Python">
+      <img src="./images/docker.png" alt="Docker">
+      <img src="./images/firebase.png" alt="Firebase">
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SECTION -->
+  <section class="testimonials">
+    <h3>What Our Clients Say</h3>
+    <div class="testimonial-cards">
+      <div class="testimonial">
+        <p>"HeshSoftware built our entire backend with secure and scalable architecture. They're amazing!"</p>
+        <h5>- Aman Joshi, AgriMart CEO</h5>
+      </div>
+      <div class="testimonial">
+        <p>"The mobile app delivered by HeshSoftware helped increase our business by 40% in 6 months."</p>
+        <h5>- Priya Mehta, MedTech Labs</h5>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SECTION -->
+  <section class="newsletter">
+    <h3>Subscribe to Our Newsletter</h3>
+    <p>Stay updated with the latest trends in IT & tech from HeshSoftware.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2025 HeshSoftware. Future-Driven Tech Company.</p>
-    <div class="footer-links">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Use</a>
-      <a href="sitemap.html">Sitemap</a>
+    <div class="footer-container">
+      <div class="footer-about">
+        <img src="./images/logo.jpg" alt="HeshSoftware Logo" class="footer-logo" />
+        <h4>HeshSoftware</h4>
+        <p>Empowering businesses through smart and scalable software solutions.</p>
+      </div>
+
+      <div class="footer-links">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="careers.html">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h5>Contact</h5>
+        <p>Email: <a href="mailto:heshsoftware12@gmail.com">heshsoftware12@gmail.com</a></p>
+        <p>Phone: <a href="tel:+919876543210">+91-98765-43210</a></p>
+        <div class="social-icons">
+          <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
+          <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn" /></a>
+          <a href="#"><img src="./images/twitter.svg" alt="Twitter" /></a>
+        </div>
+      </div>
     </div>
-    <p>Email: <a href="mailto:hello@heshsoftware.com">hello@heshsoftware.com</a> | Phone: +91-98765-43210</p>
-    <div class="social-icons">
-      <a href="#"><img src="./images/facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="./images/linkedin.svg" alt="LinkedIn"></a>
-      <a href="#"><img src="./images/x.svg" alt="Twitter"></a>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HeshSoftware. Built with ❤️ in India.</p>
     </div>
   </footer>
-
+<script src="app.js"></script>
 </body>
 </html>
